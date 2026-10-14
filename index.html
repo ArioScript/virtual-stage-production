@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скины команды</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/skinview3d@3.0.0/bundles/skinview3d.bundle.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- САЙДБАР -->
+  <aside class="sidebar">
+    <h1 class="logo">Категории</h1>
+    <nav id="categories" class="nav"></nav>
+  </aside>
+
+  <!-- КОНТЕНТ -->
+  <main class="content">
+    <header class="content-header">
+      <h2 id="category-title">Все скины</h2>
+      <input type="text" id="search" placeholder="🔍 Поиск...">
+      <button id="download-all" class="btn-download-all">
+      📦 Скачать категорию
+    </button>
+    </header>
+    <div id="gallery" class="gallery"></div>
+  </main>
+
+</div>
+<!-- МОДАЛКА С ИНСТРУКЦИЕЙ -->
+<div id="instruction-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeInstruction()">&times;</button>
+    <div class="modal-icon">✅</div>
+    <h2>Скины скачаны!</h2>
+    <p class="modal-subtitle">Архив с скинами сохранён. Распакуй его и следуй инструкции ниже 👇</p>
+
+    <div class="instruction-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Заходишь в папку своего лаунчера Minecraft</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Находишь папку <code>config</code></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">В ней открываешь папку <code>blockbuster</code></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Дальше: <code>models</code> → <code>fred</code> → <code>skins</code></div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text">Кидаешь туда все скины из архива — и готово!</div>
+      </div>
+    </div>
+
+    <button class="modal-btn" onclick="closeInstruction()">Понял, спасибо 👍</button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
